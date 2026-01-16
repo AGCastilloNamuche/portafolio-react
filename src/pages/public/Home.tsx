@@ -1,4 +1,5 @@
 import { Link } from "react-router"
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import starIcon from "../../assets/images/star-2.svg"
 import iconPc from "../../assets/images/computer-pc.svg??raw";
 import iconUserExperience from "../../assets/images/user-experience.svg??raw";
@@ -13,6 +14,21 @@ import iconDocs from "../../assets/images/card_docs_icon_02.svg??raw";
 import iconDocs2 from "../../assets/images/card_docs_icon_03.svg??raw";
 import iconBlog from "../../assets/images/card_figma_icon_01.svg??raw";
 import iconBlog2 from "../../assets/images/card_figma_icon_02.svg??raw";
+import agv from "../../assets/images/AGV.svg??raw";
+import fruitist from "../../assets/images/fruitist.svg??raw";
+import dash from "../../assets/images/dash.svg??raw"
+import house from "../../assets/images/logo-house.png"
+import microcash from "../../assets/images/microcash.png"
+import armadillo from "../../assets/images/armadillo.png"
+import clinica from "../../assets/images/clinica-cha.jpg"
+
+import website from "../../assets/animation/modules.lottie";
+import devAgx from "../../assets/animation/dev_agx.lottie";
+import blog from "../../assets/animation/website-development.lottie";
+import { IconBulb, IconPalette } from '@tabler/icons-react';
+import { EditWell } from "../../components";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Grid } from 'swiper/modules';
 
 const Home = () => {
     return (
@@ -20,11 +36,11 @@ const Home = () => {
             <div className="d-block m-auto text-center w-100 container-title mb-15">
                 <h1 className="position-relative">
                     <span className="star-icon left">
-                        <img src={starIcon} alt="" />
+                        <IconBulb size={90} color="#4c6763" />
                     </span>
                     Hola. Soy Gian Pierre
                     <span className="star-icon right">
-                        <img src={starIcon} alt="" />
+                        <IconPalette size={90} color="#4c6763" />
                     </span>
                 </h1>
                 <div className="wrapper">
@@ -38,23 +54,6 @@ const Home = () => {
             <div className="container-inf mb-10">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-24">
                     <div className="lg:col-span-1 space-y-6">
-                        <div className="card card-flat card-wrap bg-pink card-link">
-                            <Link to="#">
-                                <div className="card-flouris">
-                                    <div className="card-icon-svg">
-                                        <div className="d-flex align-center justify-space-between gap-4">
-                                            <div className="icon-svg" dangerouslySetInnerHTML={{ __html: iconDocs }} ></div>
-                                            <div className="icon-svg" dangerouslySetInnerHTML={{ __html: iconDocs2 }} ></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h3 className="card-subtitle text-right">Mi portafolio</h3>
-                                <h2 className="card-title text-right">Mis Proyectos</h2>
-                            </Link>
-                        </div>
-                    </div>
-
-                    <div className="lg:col-span-2 space-y-6">
                         <Link to="#">
                             <div className="card border-radius-flat p-0 card-flat bg-mint card-link">
                                 <div className="card-flouris">
@@ -70,53 +69,38 @@ const Home = () => {
                                     <h3 className="card-subtitle text-right">Trayectoria</h3>
                                     <h2 className="card-title text-right">Mi Experiencia</h2>
                                 </div>
+                                <EditWell />
+                            </div>
+                        </Link>
+                    </div>
 
-                                <div className="container-inner">
-                                    <div className="toobar">
-                                        <div className="logo-vs">
-                                            <h1 className="text-h2 font-acorn m-0 p-0">A</h1>
-                                        </div>
-                                        <div className="d-flex align-center gap-2">
-                                            <span className="circle"></span>
-                                            <span className="circle"></span>
-                                            <span className="circle"></span>
-                                        </div>
-                                    </div>
-                                    <div className="main-area">
-                                        <div className="edit-well">
-                                            <div className="tab-bar">
-                                                <div className="tab active">
-                                                    <div className="fillname">main.tsx</div>
-                                                    <div className="close-icon">
-                                                        <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                                                            <path d="M12.1465 5.14652C12.3418 4.95127 12.6583 4.95126 12.8535 5.14652C13.0487 5.34179 13.0488 5.65831 12.8535 5.85355L9.70705 9.00004L12.8535 12.1465C13.0488 12.3418 13.0488 12.6583 12.8535 12.8536C12.6583 13.0488 12.3418 13.0488 12.1465 12.8536L9.00002 9.70707L5.85354 12.8536C5.6583 13.0488 5.34177 13.0488 5.14651 12.8536C4.95125 12.6583 4.95125 12.3418 5.14651 12.1465L8.29299 9.00004L5.14651 5.85355C4.95125 5.6583 4.95126 5.34179 5.14651 5.14652C5.34177 4.95126 5.65828 4.95126 5.85354 5.14652L9.00002 8.29301L12.1465 5.14652Z"></path>
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                                <div className="tab fill-end"></div>
-                                            </div>
-                                            <div className="editor-area">
-                                                <div className="editor-file">
-                                                    <div className="pre">
-                                                        <div className="code">
-                                                            <div className="line">import React from 'react';</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
+                    <div className="lg:col-span-2 space-y-6 h-100">
+                        <div className="card border-radius-flat p-0 card-flat bg-pink card-link h-100">
+                            <Link to="#">
+                                <div className="card-flouris">
+                                    <div className="card-icon-svg">
+                                        <div className="d-flex align-center justify-space-between gap-4">
+                                            <div className="icon-svg" dangerouslySetInnerHTML={{ __html: iconDocs }} ></div>
+                                            <div className="icon-svg" dangerouslySetInnerHTML={{ __html: iconDocs2 }} ></div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </Link>
+                                <div className="card-header mb-5">
+                                    <h3 className="card-subtitle text-right">Mi portafolio</h3>
+                                    <h2 className="card-title text-right">Mis Proyectos</h2>
+                                </div>
+                                <div className="main-area-inner">
+                                    <div className="img-inner" dangerouslySetInnerHTML={{ __html: dash }}></div>
+                                </div>
+                            </Link>
+                        </div>
                     </div>
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     <div className="lg:col-span-2 space-y-6">
                         <Link to="#">
-                            <div className="card card-flat card-wrap bg-babyblue card-link">
+                            <div className="card card-flat border-radius-flat p-0 bg-babyblue card-link">
                                 <div className="card-flouris">
                                     <div className="card-icon-svg">
                                         <div className="d-flex align-center justify-space-between gap-4">
@@ -129,14 +113,20 @@ const Home = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <h3 className="card-subtitle text-right">Herramientas</h3>
-                                <h2 className="card-title text-right">Diseñar y desarrollar</h2>
+                                <div className="card-header mb-5">
+                                    <h3 className="card-subtitle text-right">Herramientas</h3>
+                                    <h2 className="card-title text-right">Diseñar y desarrollar</h2>
+                                </div>
+                                <div className="d-flex">
+                                    <DotLottieReact width={500} height={500} src={website} loop autoplay />
+                                    <DotLottieReact width={500} height={500} src={devAgx} loop autoplay />
+                                </div>
                             </div>
                         </Link>
                     </div>
 
                     <div className="lg:col-span-1 space-y-6">
-                        <div className="card card-flat card-wrap bg-rust card-link">
+                        <div className="card card-flat border-radius-flat p-0 bg-rust card-link h-100">
                             <Link to="#">
                                 <div className="card-flouris">
                                     <div className="card-icon-svg">
@@ -146,16 +136,21 @@ const Home = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <h3 className="card-subtitle text-right">Blog</h3>
-                                <h2 className="card-title text-right">Artículos</h2>
+                                <div className="card-header mb-5">
+                                    <h3 className="card-subtitle text-right">Blog</h3>
+                                    <h2 className="card-title text-right">Artículos</h2>
+                                </div>
+                                <div className="d-flex align-center justify-center ">
+                                    <DotLottieReact src={blog} width={500} height={500} loop autoplay />
+                                </div>
                             </Link>
                         </div>
                     </div>
                 </div>
             </div>
             {/* Flujo de trabajo */}
-            <div className="container-workflow">
-                <h2 className="text-center text-h1">Flujo de trabajo</h2>
+            <div className="container-workflow mb-10">
+                <h2 className="text-center text-h1 line-height-1">Flujo de trabajo</h2>
                 <div className="wrapper mb-15">
                     <p className="text-center grid-column-2 subtitle">
                         Desarrollador full-stack. Creo experiencias atractivas, accesibles y centradas en el usuario. Con pasión por la creatividad y un ojo meticuloso para los detalles.
@@ -220,6 +215,49 @@ const Home = () => {
                             Creo prototipos y un MVP para validar rápido, ajustar con feedback y priorizar lo que más impacta.
                         </p>
                     </div>
+                </div>
+            </div>
+            {/* Colaboración */}
+            <div className="container-business">
+                <h2 className="text-center text-h1 line-height-1">Colaboraciones</h2>
+                <div className="wrapper mb-15">
+                    <p className="text-center grid-column-2 subtitle">
+                        He trabajado con empresas increíbles, creando soluciones digitales para web y móvil.
+                    </p>
+                </div>
+
+                <div className="flex justify-center items-center">
+                    <Swiper
+                        slidesPerView={4}
+                        spaceBetween={10}
+                        modules={[Autoplay, Grid]}
+                        autoplay={{
+                            delay: 2500,
+                            disableOnInteraction: false,
+                        }}
+                        className="mySwiper"
+                    >
+                        <SwiperSlide>
+                            <div className="flex items-center gap-5">
+                                <div className="icon-slide" dangerouslySetInnerHTML={{ __html: agv }}></div>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="icon-slide" dangerouslySetInnerHTML={{ __html: fruitist }}></div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={house} alt="house select" />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={microcash} alt="microcash" />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={armadillo} alt="armadillo" />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={clinica} alt="clinica veterinaria champagnat" />
+                        </SwiperSlide>
+                    </Swiper>
                 </div>
             </div>
         </div>

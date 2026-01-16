@@ -1,16 +1,10 @@
 import { Outlet } from "react-router"
-import { HorizontalNav, RadialCanvas } from "../components/"
+import { HorizontalNav, Footer } from "../components/"
 import navItems from "../navigation"
 const RootLayout = () => {
     return (
         <div className="container-root-layout">
             <HorizontalNav navItems={navItems} />
-            {/* <div className="hero">
-                <div className="mask"></div>
-                <div className="holder">
-                    <RadialCanvas />
-                </div>
-            </div> */}
             <div className="animated-background-container">
                 <div className="heroGradient"></div>
             </div>
@@ -19,6 +13,7 @@ const RootLayout = () => {
                     <Outlet />
                 </main>
             </div>
+            <Footer navItems={navItems} />
         </div>
     )
 }

@@ -1,6 +1,6 @@
 @font-face {
     font-family: "acorn";
-    src: url("../../../public/fonts/acorn.woff") format("woff");
+    src: url("/fonts/acorn.woff") format("woff");
     font-style: normal;
     font-display: swap;
 }
@@ -12,6 +12,11 @@ h4,
 h5,
 h6 {
     font-family: "acorn", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+
+.line-height-1 {
+    line-height: 1 !important;
 }
 
 .mb-1 {
@@ -315,6 +320,10 @@ h6 {
     letter-spacing: -2px;
 }
 
+.text-h2 {
+    font-size: var(--font-h2);
+}
+
 .p-0 {
     padding: 0 !important;
 }
@@ -435,3 +444,54 @@ h6 {
 .text-justify {
     text-align: justify;
 }
+
+.keyword {
+    color: var(--color-pink-50);
+}
+
+.keyword-red {
+    color: var(--color-red);
+}
+
+.keyword-green {
+    color: var(--color-green);
+}
+
+.keyword-yellow {
+    color: #d9d934;
+}
+
+.keyword-blue {
+    color: #018ffc;
+}
+
+.keyword-rust {
+    color: var(--color-rust);
+}
+
+.h-100 {
+    height: 100% !important;
+}
+
+.avatar-profile {
+    background-color: var(--c2);
+    border-radius: 50%;
+    width: 384px;
+    height: 384px;
+    overflow: hidden;
+    /* grid-column-start: 4;
+    grid-column-end: 10;
+    margin-top: max(var(--14px), calc(var(--14px) + (28 - 14) * ((100vw - 375px) / (1600 - 375)))); */
+}
+
+/* .avatar-profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container-text-profile {
+    grid-column-start: 12;
+    grid-column-end: 24;
+    margin-top: var(--24px);
+} */
